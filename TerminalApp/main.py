@@ -4,6 +4,8 @@ import os
 from pyfiglet import Figlet
 import sys
 from colorama import init, Fore
+from loadings import loadingwelcome
+
 
 def welcome_page():
     os.system("clear")
@@ -54,7 +56,7 @@ def welcome_page():
                 "message": "Do you want to exit?",
                 "name": "exit",
                 "default": False,
-            },
+            }
         ]
         ans = prompt(confirm, style=style)
         if ans["exit"]:
@@ -64,5 +66,6 @@ def welcome_page():
 
 
 if __name__ == "__main__":
-    init(autoreset=True) # Colorama autoreset terminal color True
+    init(autoreset=True)  # Colorama autoreset terminal color True
+    loadingwelcome()
     welcome_page()
