@@ -1,7 +1,7 @@
 <p align="center">
  <img width="100px" src="https://uupload.ir/files/xevo_logo.png" align="center" alt="GitHub Readme Stats" />
- <h2 align="center">Subtitle Downloader</h2>
- <p align="center">First tool for download fa subtitle on Linux</p>
+ <h2 align="center">neoSubtitle Downloader</h2>
+ <p align="center">Modern Subtitle Downloader</p>
 </p>
   <p align="center">
   <a href="">
