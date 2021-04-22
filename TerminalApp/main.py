@@ -4,7 +4,6 @@ import os
 from pyfiglet import Figlet
 import sys
 from colorama import init, Fore
-init(autoreset=True)
 
 def welcome_page():
     os.system("clear")
