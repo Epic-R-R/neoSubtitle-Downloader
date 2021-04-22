@@ -21,7 +21,7 @@
   <p align="center">
     <a href="https://github.com/Epic-R-R/Subtitle-Downloader/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/Epic-R-R/Subtitle-Downloader/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/Epic-R-R/Subtitle-Downloader/issues/new?assignees=&labels=documentation&template=feature_request.md&title=">Request Feature</a>
   </p>
 
 ## Table of Contents
