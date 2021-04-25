@@ -1,14 +1,14 @@
 from PyInquirer import prompt
 from styles import style
-import os
+from helper import screencls, whyUse
 from pyfiglet import Figlet
 import sys
 from colorama import init, Fore
 from loadings import loadingwelcome
-
+from donate import donate
 
 def welcome_page():
-    os.system("clear")
+    screencls()
     ssd = Figlet(font="slant")
     print(f"{Fore.LIGHTMAGENTA_EX}{ssd.renderText('neoSubtitle DW')}")
     print(f"{Fore.BLUE}Welcome To neoSubtitle Downloader")
@@ -46,9 +46,9 @@ def welcome_page():
     elif ans["info"] == "Explorer":
         pass
     elif ans["info"] == "Why use neoSubtitle Downloader ?":
-        pass
+        whyUse()
     elif ans["info"] == "Donate":
-        pass
+        donate()
     elif ans["info"] == "Exit":
         confirm = [
             {
