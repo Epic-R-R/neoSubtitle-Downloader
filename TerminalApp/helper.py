@@ -6,3 +6,6 @@ def screencls():
         os.system("clear")
     if platform.system() == "Windows":
         os.system("cls")
+
+def whyUse():
+    pass
