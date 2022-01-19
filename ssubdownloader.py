@@ -162,9 +162,9 @@ def welcome_page():
 
 # create main func
 def main():
-    if read("SOFTWAREINFO")["first"] == "True":
-        update(newkey=PATH, obj="path", key="SOFTWAREINFO")
-        update(newkey="False", obj="first", key="SOFTWAREINFO")
+    if read("SOFTWARE")["first"] == "True":
+        update(newkey=PATH, obj="path", key="SOFTWARE")
+        update(newkey="False", obj="first", key="SOFTWARE")
     ssd = Figlet(font="slant")
     while True:
         os.system("clear")
@@ -424,7 +424,7 @@ def main():
                             auth = prompt(auth, style=style)
                             if auth["continue"]:
                                 update(
-                                    newkey=str(anspath), obj="path", key="SOFTWAREINFO"
+                                    newkey=str(anspath), obj="path", key="SOFTWARE"
                                 )
                                 print(
                                     f"""
@@ -461,7 +461,7 @@ def main():
                             if auth["continue"]:
                                 os.mkdir(anspath["path"])
                                 update(
-                                    newkey=str(anspath), obj="path", key="SOFTWAREINFO"
+                                    newkey=str(anspath), obj="path", key="SOFTWARE"
                                 )
                                 print(
                                     f"""
@@ -493,7 +493,7 @@ def main():
                             auth = prompt(auth, style=style)
                             if auth["continue"]:
                                 update(
-                                    newkey=str(anspath), obj="path", key="SOFTWAREINFO"
+                                    newkey=str(anspath), obj="path", key="SOFTWARE"
                                 )
                                 print(
                                     f"""
@@ -530,7 +530,7 @@ def main():
                             if auth["continue"]:
                                 os.mkdir(anspath["path"])
                                 update(
-                                    newkey=str(anspath), obj="path", key="SOFTWAREINFO"
+                                    newkey=str(anspath), obj="path", key="SOFTWARE"
                                 )
                                 print(
                                     f"""
@@ -550,7 +550,7 @@ def main():
             elif ans["setting"] == "Show Settings":
                 print(
                     f"""
-                {bcolors.OKGREEN}Directory  :  {read(keys="SOFTWAREINFO")["path"]}{bcolors.ENDC}
+                {bcolors.OKGREEN}Directory  :  {read(keys="SOFTWARE")["path"]}{bcolors.ENDC}
                 """
                 )
                 back = [
@@ -569,11 +569,11 @@ def main():
         elif ans["info"] == "About":
             print(
                 f"""
-            Application : {bcolors.HEADER}{read("SOFTWAREINFO")["Name"]}{bcolors.ENDC}
-            Powered By  : {bcolors.OKGREEN}{read("SOFTWAREINFO")["powered"]}{bcolors.ENDC}
-            Email       : {bcolors.OKBLUE}{read("SOFTWAREINFO")["Email"]}{bcolors.ENDC}
-            Discription : {bcolors.WARNING}{read("SOFTWAREINFO")["Discription"]}{bcolors.ENDC}
-            Version     : {bcolors.BOLD}{read("SOFTWAREINFO")["version"]}{bcolors.ENDC}
+            Application : {bcolors.HEADER}{read("SOFTWARE")["Name"]}{bcolors.ENDC}
+            Powered By  : {bcolors.OKGREEN}{read("SOFTWARE")["powered"]}{bcolors.ENDC}
+            Email       : {bcolors.OKBLUE}{read("SOFTWARE")["Email"]}{bcolors.ENDC}
+            Discription : {bcolors.WARNING}{read("SOFTWARE")["Discription"]}{bcolors.ENDC}
+            Version     : {bcolors.BOLD}{read("SOFTWARE")["version"]}{bcolors.ENDC}
             """
             )
             back = [
@@ -778,7 +778,7 @@ def main():
             req = requests.get(
                 "https://raw.githubusercontent.com/Epic-R-R/Subtitle-Downloader/Sullivan/package.json"
             ).json()
-            if float(req["versions"][-1]) == float(read("SOFTWAREINFO")["version"]):
+            if float(req["versions"][-1]) == float(read("SOFTWARE")["version"]):
                 print(
                     f"""
                 {bcolors.GREEN}You use latest version{bcolors.ENDC}
@@ -786,7 +786,7 @@ def main():
                 )
                 sleep(3)
                 screencls()
-            if float(req["versions"][-1]) > float(read("SOFTWAREINFO")["version"]):
+            if float(req["versions"][-1]) > float(read("SOFTWARE")["version"]):
                 print(
                     f"""
                 {bcolors.WARNING}You use older version{bcolors.ENDC}
