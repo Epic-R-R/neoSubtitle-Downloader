@@ -15,7 +15,7 @@ def creat():
         "name": "",
         "email": "",
     }
-    config_object["SOFTWAREINFO"] = {
+    config_object["SOFTWARE"] = {
         "first": "True",
         "path": f"{PATH}",
         "version": 0.3,
